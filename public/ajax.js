@@ -12,10 +12,12 @@ document.querySelector('button').addEventListener('click', () => {
 
         xhr.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
-                console.log(this);
+                console.log(this, inputIn.value);
             }
         };
     } else {
         alert('Check please checkbox');
     }
 });
+
+const inputIn = document.querySelector('input');
