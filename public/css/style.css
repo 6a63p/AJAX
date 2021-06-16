@@ -21,3 +21,13 @@ body {
     font-family: fantasy; 
     opacity: 0.5;
 }
+
+.out {
+    font-size: 16px;
+    box-shadow: 0 4px 16px #ccc;
+    font-family: fantasy; 
+    opacity: 0.5;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 25px;
+}

@@ -6,7 +6,9 @@ document.querySelector('button').addEventListener('click', () => {
 
         xhr.send(JSON.stringify(
             {
-                lox: document.querySelector('input').value,
+                message: document.querySelector('input').value,
+                Time: timeI,
+
             },
         ));
 
@@ -21,3 +23,5 @@ document.querySelector('button').addEventListener('click', () => {
 });
 
 const inputIn = document.querySelector('input');
+
+const timeI = Date();
