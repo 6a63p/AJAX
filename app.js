@@ -57,8 +57,10 @@ app.get('/ADD', (req, res) => {
         const db = client.db('admin');
         db.collection('ADD').find().toArray((error, result) => {
             if (error) throw error;
-            console.log(result);
             res.render('ADD', {'ADD': result});
+            console.log(result);
+            QQ = result;
         });
     });
 });
+

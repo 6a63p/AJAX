@@ -7,7 +7,7 @@ document.querySelector('button').addEventListener('click', () => {
         xhr.send(JSON.stringify(
             {
                 message: document.querySelector('input').value,
-                Time: timeI,
+                Time: Date(),
 
             },
         ));
@@ -24,4 +24,17 @@ document.querySelector('button').addEventListener('click', () => {
 
 const inputIn = document.querySelector('input');
 
-const timeI = Date();
+
+const getData = () => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://localhost:5000/ADD');
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            console.log(this);
+        }
+    };
+};
+getData();
+
+const messages = document.getElementById('messages');
