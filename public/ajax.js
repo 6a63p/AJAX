@@ -31,7 +31,7 @@ const getData = () => {
     xhr.send();
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-            console.log(this);
+            messages.innerHTML = xhr.responseText;
         }
     };
 };

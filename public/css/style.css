@@ -1,33 +1,31 @@
 body {
-    background-attachment: fixed;
-    background: url(https://images.wallpaperscraft.ru/image/kub_figura_temnyj_142157_1920x1080.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-   
+  background-attachment: fixed;
+  background: url(https://images.wallpaperscraft.ru/image/kub_figura_temnyj_142157_1920x1080.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-
 
 .button {
-    font-size: 16px;
-    box-shadow: 0 4px 16px #ccc;
-    font-family: fantasy;
-    opacity: 0.5;
+  font-size: 16px;
+  box-shadow: 0 4px 16px #ccc;
+  font-family: fantasy;
+  opacity: 0.5;
 }
 .input {
-    font-size: 16px;
-    box-shadow: 0 4px 16px #ccc;
-    font-family: fantasy; 
-    opacity: 0.5;
+  font-size: 16px;
+  box-shadow: 0 4px 16px #ccc;
+  font-family: fantasy;
+  opacity: 0.5;
 }
 
-.out {
-    font-size: 16px;
-    box-shadow: 0 4px 16px #ccc;
-    font-family: fantasy; 
-    opacity: 0.5;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 25px;
+.messages {
+  font-size: 16px;
+  box-shadow: 0 4px 16px #ccc;
+  font-family: fantasy;
+  opacity: 0.5;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 25px;
 }

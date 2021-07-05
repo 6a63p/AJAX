@@ -59,8 +59,6 @@ app.get('/ADD', (req, res) => {
             if (error) throw error;
             res.render('ADD', {'ADD': result});
             console.log(result);
-            QQ = result;
         });
     });
 });
-
