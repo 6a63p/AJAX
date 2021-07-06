@@ -15,6 +15,8 @@ document.querySelector('button').addEventListener('click', () => {
         xhr.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
                 console.log(this, inputIn.value);
+                inputIn.value = '';
+                getData();
             }
         };
     } else {
@@ -22,7 +24,9 @@ document.querySelector('button').addEventListener('click', () => {
     }
 });
 
+
 const inputIn = document.querySelector('input');
+
 
 
 const getData = () => {
