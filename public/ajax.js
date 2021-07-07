@@ -1,33 +1,26 @@
 document.querySelector('button').addEventListener('click', () => {
-    if (document.getElementById('check').checked) {
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://localhost:5000');
-        xhr.setRequestHeader('Content-type', 'application/json');
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://localhost:5000');
+    xhr.setRequestHeader('Content-type', 'application/json');
 
-        xhr.send(JSON.stringify(
-            {
-                message: document.querySelector('input').value,
-                Time: Date(),
+    xhr.send(JSON.stringify(
+        {
+            name: document.getElementById('name').value,
+            message: document.querySelector('input').value,
+            Time: Date(),
+        },
+    ));
 
-            },
-        ));
-
-        xhr.onreadystatechange = function () {
-            if (this.readyState === 4 && this.status === 200) {
-                console.log(this, inputIn.value);
-                inputIn.value = '';
-                getData();
-            }
-        };
-    } else {
-        alert('Check please checkbox');
-    }
+    xhr.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            console.log(this, inputIn.value);
+            inputIn.value = '';
+            getData();
+        }
+    };
 });
 
-
 const inputIn = document.querySelector('input');
-
-
 
 const getData = () => {
     const xhr = new XMLHttpRequest();
@@ -42,3 +35,27 @@ const getData = () => {
 getData();
 
 const messages = document.getElementById('messages');
+
+document.querySelector('input').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://localhost:5000');
+        xhr.setRequestHeader('Content-type', 'application/json');
+
+        xhr.send(JSON.stringify(
+            {
+                name: document.getElementById('name').value,
+                message: document.querySelector('input').value,
+                Time: Date(),
+            },
+        ));
+
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                console.log(this, inputIn.value);
+                inputIn.value = '';
+                getData();
+            }
+        };
+    }
+});
