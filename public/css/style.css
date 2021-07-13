@@ -28,8 +28,10 @@ body {
   font-family: fantasy;
   opacity: 0.5;
   display: block;
-  width: 596px;
+  width: 601px;
   height: 360px;
+  background-color: white;
+  overflow: scroll;
 }
 
 .name {

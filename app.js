@@ -46,9 +46,8 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 console.log(moment());
 
-//  cccccccccccccccccccccccc
 
-const MongoClient = require('mongodb').MongoClient;
+const { MongoClient } = require('mongodb');
 
 
 app.get('/ADD', (req, res) => {
@@ -57,8 +56,14 @@ app.get('/ADD', (req, res) => {
         const db = client.db('admin');
         db.collection('ADD').find().toArray((error, result) => {
             if (error) throw error;
-            res.render('ADD', {'ADD': result});
+            res.render('ADD', { ADD: result });
             console.log(result);
         });
     });
 });
+
+
+const Now = () => {
+    const date = new Date();
+    const formattedDate = moment(date).format('YYYY/MM/DD/HH:mm:s');
+};

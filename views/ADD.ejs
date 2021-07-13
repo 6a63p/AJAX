@@ -1,7 +1,7 @@
 
 <ul>
-    <% ADD.forEach(function(ADD){ %>
-      <li><%= ADD.data.Time %></li>
-      <li><%= ADD.data.message %></li>
-    <% }); %>
-  </ul>
+      <% ADD.forEach(function(ADD){ %>
+      <li><%= ADD.data.name %> - <%= ADD.data.message %> </li>
+      <li><%= ADD.data.Time %> <li>
+      <% }); %>
+</ul>
